@@ -107,15 +107,7 @@ export function Services() {
                 ))}
               </ul>
 
-              {/* Hover Arrow */}
-              <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-orange-600 dark:text-orange-500 inline-flex items-center gap-2">
-                  Más información
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </div>
+              
             </motion.div>
           ))}
         </div>

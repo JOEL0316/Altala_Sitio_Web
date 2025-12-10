@@ -1,8 +1,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { MapPin, Calendar, Eye } from 'lucide-react';
+import { MapPin, Calendar, Eye, X } from 'lucide-react';
 
 export function Projects() {
   const [ref, inView] = useInView({
@@ -11,6 +10,7 @@ export function Projects() {
   });
 
   const [filter, setFilter] = useState('all');
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const projects = [
     {
@@ -46,7 +46,7 @@ export function Projects() {
       category: 'urban',
       location: 'Aculco, Estado de México',
       year: '2023',
-      image: '/images/image11.png',
+      image: '/images/image19.png',
       description: 'Desarrollo de calles completas con infraestructura para peatones y ciclistas.',
     },
     {
@@ -67,14 +67,28 @@ export function Projects() {
       image: '/images/image13.png',
       description: 'Construcción de muros de contención y estructuras de mampostería.',
     },
+    {
+      id: 7,
+      title: 'Armado de acero de refuerzo',
+      category: 'commercial',
+      location: 'Estado de México',
+      year: '2023',
+      image: '/images/image14.png',
+      description: 'Armado de concreto armado.',
+    },
+    {
+      id: 8,
+      title: 'Muros y mampostería',
+      category: 'infrastructure',
+      location: 'Estado de México',
+      year: '2023',
+      image: '/images/image17.png',
+      description: 'Armado de concreto armado.',
+    },
   ];
 
   const categories = [
     { id: 'all', label: 'Todos los Proyectos' },
-    { id: 'infrastructure', label: 'Infraestructura' },
-    { id: 'residential', label: 'Estructuras' },
-    { id: 'commercial', label: 'Obra Civil' },
-    { id: 'urban', label: 'Movilidad' },
   ];
 
   const filteredProjects = filter === 'all' 
@@ -134,8 +148,11 @@ export function Projects() {
               className="group bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               {/* Image */}
-              <div className="relative h-64 overflow-hidden">
-                <ImageWithFallback
+              <div 
+                className="relative h-64 overflow-hidden cursor-pointer"
+                onClick={() => setSelectedImage(project.image)}
+              >
+                <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -201,6 +218,38 @@ export function Projects() {
           </button>
         </motion.div>
       </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="relative max-w-6xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Botón cerrar */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 text-white hover:text-orange-500 transition-colors"
+              aria-label="Cerrar imagen"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            
+            {/* Imagen ampliada */}
+            <img
+              src={selectedImage}
+              alt="Imagen ampliada"
+              className="w-full h-auto rounded-lg"
+            />
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 }
