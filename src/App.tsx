@@ -36,7 +36,7 @@ export default function App() {
         scrolled={scrolled} 
         darkMode={darkMode} 
         setDarkMode={setDarkMode}
-        logoImage="/src/images/logocirculo.png"
+        logoImage="/images/logocirculo.png"
       />
       <main>
         <Hero />
