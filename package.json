@@ -44,6 +44,7 @@
             "react-intersection-observer": "*",
             "react-resizable-panels": "^3.0.6",
             "recharts": "^3.5.1",
+            "serve": "^14.2.5",
             "sonner": "^2.0.7",
             "tailwind-merge": "*",
             "vaul": "^1.1.2"
@@ -58,6 +59,9 @@
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build"
+            "build": "vite build",
+            "preview": "vite preview",
+            "start": "serve -s build -l {PORT:-3000}",
+            "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
       }
 }
