@@ -32,12 +32,12 @@ export function WhyChooseUs() {
     {
       icon: Award,
       title: 'Experiencia Comprobada',
-      description: 'Más de 4 años de trayectoria exitosa en la industria.',
+      description: 'Más de 10 años de trayectoria exitosa en la industria.',
     },
     {
       icon: Users,
       title: 'Personal Calificado',
-      description: 'Ingenieros y técnicos certificados con amplia experiencia.',
+      description: 'Ingenieros y personal certificados con amplia experiencia.',
     },
   ];
 

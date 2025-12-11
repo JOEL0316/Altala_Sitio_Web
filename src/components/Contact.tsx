@@ -26,7 +26,7 @@ export function Contact() {
       window.open(`mailto:altala_constru@outlook.com?subject=${subject}&body=${body}`, '_blank');
     } else {
       const message = `Hola, me gustaría solicitar una cotización:%0A%0ANombre: ${formData.name}%0AEmail: ${formData.email}%0ATeléfono: ${formData.phone}%0ATipo de Proyecto: ${formData.projectType}%0A%0AMensaje: ${formData.message}`;
-      window.open(`https://wa.me/4464113087?text=${message}`, '_blank');
+      window.open(`https://wa.me/7121087898?text=${message}`, '_blank');
     }
   };
 
