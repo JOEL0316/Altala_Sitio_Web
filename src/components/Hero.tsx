@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Button } from './ui/button';
 
 export function Hero() {
   const scrollToContact = () => {
@@ -73,9 +74,11 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap gap-4"
           >
-            <button
+            <Button
               onClick={scrollToContact}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 group"
+              variant="orange"
+              size="lg"
+              className="px-8 py-4 group"
             >
               <span className="flex items-center gap-2">
                 Solicitar Cotización
@@ -83,7 +86,7 @@ export function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </button>
+            </Button>
             <button
               onClick={scrollToAbout}
               className="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"

@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { Mail, Phone, MapPin, MessageSquare } from 'lucide-react';
+import { Button } from './ui/button';
 
 export function Contact() {
   const [ref, inView] = useInView({
@@ -243,22 +244,26 @@ export function Contact() {
 
                 {/* Submit Buttons */}
                 <div className="grid sm:grid-cols-2 gap-4 pt-4">
-                  <button
+                  <Button
                     type="submit"
-                    onClick={(e) => handleSubmit(e, 'email')}
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleSubmit(e, 'email')}
+                    variant="purple"
+                    size="lg"
+                    className="w-full px-6 py-4"
                   >
                     <Mail className="w-5 h-5" />
                     Enviar por Email
-                  </button>
-                  <button
+                  </Button>
+                  <Button
                     type="submit"
-                    onClick={(e) => handleSubmit(e, 'whatsapp')}
-                    className="w-full bg-green-600 text-white px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleSubmit(e, 'whatsapp')}
+                    variant="green"
+                    size="lg"
+                    className="w-full px-6 py-4"
                   >
                     <MessageSquare className="w-5 h-5" />
                     Enviar por WhatsApp
-                  </button>
+                  </Button>
                 </div>
               </div>
             </form>

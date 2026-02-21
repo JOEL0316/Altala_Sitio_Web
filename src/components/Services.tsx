@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import { Building2, Construction, Signpost, Waves, Ruler, FileText, Users } from 'lucide-react';
+import { Button } from './ui/button';
 
 export function Services() {
   const [ref, inView] = useInView({
@@ -119,15 +120,17 @@ export function Services() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <button
+          <Button
             onClick={() => document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+            variant="blue"
+            size="lg"
+            className="px-8 py-4"
           >
             Solicitar Asesoría Gratuita
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </button>
+          </Button>
         </motion.div>
       </div>
     </section>

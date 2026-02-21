@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { MapPin, Calendar, Eye, X } from 'lucide-react';
+import { Button } from './ui/button';
 
 export function Projects() {
   const [ref, inView] = useInView({
@@ -207,15 +208,17 @@ export function Projects() {
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             ¿Tienes un proyecto en mente? Estamos listos para convertirlo en realidad.
           </p>
-          <button
+          <Button
             onClick={() => document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+            variant="purple"
+            size="lg"
+            className="px-8 py-4"
           >
             Iniciar Mi Proyecto
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </button>
+          </Button>
         </motion.div>
       </div>
 
