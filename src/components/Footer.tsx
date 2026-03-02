@@ -5,8 +5,16 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+    {
+      icon: Facebook,
+      href: 'https://www.facebook.com/share/1XMruZzE4v/',
+      label: 'Facebook',
+    },
+    {
+      icon: Instagram,
+      href: 'https://www.instagram.com/altala_construcciones?igsh=MW9qNTRwd2phZHFkZw==',
+      label: 'Instagram',
+    },
   ];
 
   const quickLinks = [
@@ -40,15 +48,18 @@ export function Footer() {
               viewport={{ once: true }}
               className="flex items-center gap-3 mb-6"
             >
-              <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-2.5 rounded-lg">
-                <Hammer className="w-6 h-6 text-white" />
-              </div>
+              <img
+                src="/images/logocirculo.png"
+                alt="Logo ALTALA"
+                className="w-10 h-10 object-contain"
+                style={{ background: 'transparent' }}
+              />
               <div>
                 <h3 className="text-white">ALTALA</h3>
                 <p className="text-xs text-gray-400 dark:text-gray-500">CONSTRUCCIONES S.A. de C.V.</p>
               </div>
             </motion.div>
-            <p className="text-gray-400 mb-4 italic">
+            <p className="text-gray-400 mb-4 italic text-4xl font-black font-sans">
               "Infraestructura Ordinaria, para Gente Extraordinaria"
             </p>
             <p className="text-gray-400 mb-6 text-sm">

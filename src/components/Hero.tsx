@@ -17,9 +17,10 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1638207849658-e57be0cdc208?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBlbmdpbmVlcmluZyUyMGNpdmlsfGVufDF8fHx8MTc2NDY0NzYzOHww&ixlib=rb-4.1.0&q=80&w=1080"
+          src="/images/image_copy.png"
           alt="Construcción e Ingeniería Civil"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-fill bg-black"
+          style={{ backgroundColor: '#000', objectFit: 'fill', width: '100vw', height: '100vh' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/85 to-gray-900/70 dark:from-black/95 dark:via-black/90 dark:to-black/80" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-900/50 dark:to-black/70" />
@@ -42,7 +43,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6"
           >
-            <span className="inline-block bg-orange-500/20 border border-orange-500/50 text-orange-400 px-4 py-2 rounded-full backdrop-blur-sm">
+            <span className="inline-block bg-orange-500/30 border border-orange-500/50 text-orange-400 px-8 py-4 rounded-full backdrop-blur-sm font-bold text-lg" style={{ fontWeight: 700, fontSize: '1.2rem' }}>
               Infraestructura Ordinaria, para Gente Extraordinaria
             </span>
           </motion.div>
@@ -103,8 +104,8 @@ export function Hero() {
             className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-white/20"
           >
             {[
-              { number: '100+', label: 'Proyectos Completados' },
-              { number: '80+', label: 'Clientes Satisfechos' },
+              { number: '20+', label: 'Proyectos Completados' },
+              { number: '50+', label: 'Clientes Satisfechos' },
               { number: '10+', label: 'Años de Experiencia' },
             ].map((stat, index) => (
               <motion.div

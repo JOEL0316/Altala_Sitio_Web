@@ -39,7 +39,7 @@ export function Gallery() {
       category: 'Seguridad',
     },
     {
-      url: '/images/image10.png',
+      url: '/images/image1.png',
       title: 'Infraestructura Urbana',
       category: 'Infraestructura',
     },

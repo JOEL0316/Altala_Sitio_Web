@@ -9,8 +9,8 @@ export function Stats() {
   });
 
   const stats = [
-    { number: 100, suffix: '+', label: 'Proyectos Completados', duration: 2 },
-    { number: 80, suffix: '+', label: 'Clientes Satisfechos', duration: 2.2 },
+    { number: 20, suffix: '+', label: 'Proyectos Completados', duration: 2 },
+    { number: 50, suffix: '+', label: 'Clientes Satisfechos', duration: 2.2 },
     { number: 10, suffix: '+', label: 'Años de Experiencia', duration: 2.4 },
     { number: 100, suffix: '%', label: 'Compromiso con Calidad', duration: 2.6 },
   ];

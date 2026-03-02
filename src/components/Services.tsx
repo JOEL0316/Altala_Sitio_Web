@@ -24,9 +24,9 @@ export function Services() {
     },
     {
       icon: Construction,
-      title: 'Infraestructura Peatonal y Ciclista',
-      description: 'Proyectos enfocados en la movilidad sustentable y espacios urbanos seguros.',
-      features: ['Calles completas', 'Ciclovías', 'Distribución del Tránsito', 'Accesibilidad universal'],
+      title: 'Acabados y Terminaciones',
+      description: 'Soluciones integrales en acabados y detalles finales para espacios funcionales y estéticos.',
+      features: ['Tabla Roca', 'Pintura', 'Carpinteria', 'Acabados Especiales'],
     },
     {
       icon: Ruler,

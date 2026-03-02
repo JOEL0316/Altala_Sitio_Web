@@ -187,3 +187,17 @@
 html {
   font-size: var(--font-size);
 }
+
+/* Fix form input text color for light/dark mode */
+.form-input-text {
+  color: #111827 !important;
+}
+.dark .form-input-text {
+  color: #ffffff !important;
+}
+.form-input-text::placeholder {
+  color: #9ca3af !important;
+}
+.dark .form-input-text::placeholder {
+  color: #9ca3af !important;
+}

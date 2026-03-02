@@ -20,7 +20,7 @@ export function Projects() {
       category: 'infrastructure',
       location: 'Aculco, Estado de México',
       year: '2023',
-      image: '/images/image1.png',
+      image: '/images/infres.png',
       description: 'Construcción y rehabilitación de vías terrestres con enfoque en movilidad sustentable.',
     },
     {
@@ -29,7 +29,7 @@ export function Projects() {
       category: 'residential',
       location: 'Zona Centro, México',
       year: '2022',
-      image: '/images/image3.png',
+      image: '/images/image13.png',
       description: 'Cimentaciones y estructuras de concreto reforzado de alta calidad.',
     },
     {
@@ -43,12 +43,12 @@ export function Projects() {
     },
     {
       id: 4,
-      title: 'Infraestructura Peatonal y Ciclista',
+      title: 'Carreteras de Concreto y Vías Urbanas',
       category: 'urban',
       location: 'Aculco, Estado de México',
       year: '2021',
-      image: '/images/image19.png',
-      description: 'Desarrollo de calles completas con infraestructura para peatones y ciclistas.',
+      image: '/images/camino.png',
+      description: 'Construcción de carreteras de concreto hidráulico y calles completas para vehículos, ciclistas y peatones.',
     },
     {
       id: 5,
@@ -65,7 +65,7 @@ export function Projects() {
       category: 'commercial',
       location: 'Estado de México',
       year: '2023',
-      image: '/images/image13.png',
+      image: '/images/muroscontencion.png',
       description: 'Construcción de muros de contención y estructuras de mampostería.',
     },
     {
@@ -79,7 +79,7 @@ export function Projects() {
     },
     {
       id: 8,
-      title: 'Mampostería estructural y confinada',
+      title: 'Mampostería y obra civil',
       category: 'infrastructure',
       location: 'Estado de México',
       year: '2023',
